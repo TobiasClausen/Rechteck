@@ -1,17 +1,30 @@
 package com.example.projects;
+public class Rechteck {
 
-class Rechteck {
     private double height;
+    private double width;
+
 
     public double getHeight() {
         return height;
     }
-    public void setHeight(double value) {
-        height = value;
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    private double width;
+    public double getWidth() {
+        return width;
+    }
 
-    public double getWidth() {return width;}
-    public void setWidth(double value) {width = value;}
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getArea() {
+        return width * height;
+    }
+    public void Exit() {
+        System.exit(0);
+    }
 }
