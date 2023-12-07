@@ -21,4 +21,5 @@ public class RechteckApplication extends Application {
     public static void main(String[] args) {
         launch();
     }
+
 }
