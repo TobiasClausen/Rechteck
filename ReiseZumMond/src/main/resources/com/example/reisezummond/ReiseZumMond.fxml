@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reisezummond.ReiseZumMondController">
+   <children>
+      <RadioButton fx:id="RadioButtoninTagen" layoutX="135.0" layoutY="128.0" mnemonicParsing="false" text="in Tagen">
+         <toggleGroup>
+            <ToggleGroup fx:id="DasorHours" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RadioButtoninStunden" layoutX="254.0" layoutY="128.0" mnemonicParsing="false" text="in Stunden" toggleGroup="$DasorHours" />
+      <Label layoutX="144.0" layoutY="214.0" text="Geschwindigkeit km/h" />
+      <TextField fx:id="TextfieldGeschwindigkeit" layoutX="300.0" layoutY="210.0" />
+      <Button fx:id="ReisedauerBerechnen" layoutX="225.0" layoutY="290.0" mnemonicParsing="false" onAction="#ActionReisedauerBerechnen" text="Reisedauer berechnen" />
+      <Label layoutX="155.0" layoutY="349.0" prefHeight="17.0" prefWidth="127.0" text="Ausgabe Reisedauer:" />
+      <TextField fx:id="AusgabeField" layoutX="300.0" layoutY="344.0" />
+   </children>
+</AnchorPane>
