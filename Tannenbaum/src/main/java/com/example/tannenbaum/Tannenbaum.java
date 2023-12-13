@@ -22,41 +22,37 @@ public class Tannenbaum {
     }
 
     public String zeichnen(){
-        String stern="*";
-        String tap =" ";
-        int blatt=1;
+        String stern = "*";
+        String tap = " ";
+        int blatt = 1;
         int breite_baum;
         int taps;
-        String result="";
+        StringBuilder result = new StringBuilder();
 
+        breite_baum = (kronenhoehe) * 2 - 1;
+        taps = breite_baum / 2;
 
-        breite_baum = (kronenhoehe)*2-1;
-        taps=breite_baum/2;
-
-        for (int i = 1; i<=kronenhoehe; i++){
-            for (int j=taps; j >= 1;j--) {
-                result = result.concat(tap);
+        for (int i = 1; i <= kronenhoehe; i++){
+            for (int j = taps; j >= 1; j--) {
+                result.append(tap+" ");
             }
             taps--;
-            for (int j=1;j<=blatt;j++){
-                result = result.concat(stern);
+            for (int j = 1; j <= blatt; j++){
+                result.append(stern);
             }
-            blatt+=2;
-            result = result.concat("/n");;
-
+            blatt += 2;
+            result.append("\n");
         }
-        for (int i = stammhoehe; i>=1;i--){
-            for (int j = breite_baum/2 - stammbreite/2; j>=1;j--){
-                result = result.concat(tap);
+        for (int i = stammhoehe; i >= 1; i--){
+            for (int j = (breite_baum / 2) - (stammbreite / 2); j >= 1; j--){
+                result.append(tap+tap);
             }
             for (int j = stammbreite; j >= 1; j--){
-                result = result.concat(stern);
+                result.append(stern);
             }
-            result = result.concat("/n");
+            result.append("\n");
         }
-        return result;
+        return result.toString();
     }
-
-
 
 }

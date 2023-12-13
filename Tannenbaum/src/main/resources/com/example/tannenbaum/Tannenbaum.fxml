@@ -6,8 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tannenbaum.TannenbaumController">
    <children>
       <Label layoutX="50.0" layoutY="43.0" text="Stammbreite:" />
       <Label layoutX="52.0" layoutY="71.0" text="Stammhöhe:" />
@@ -15,7 +14,7 @@
       <TextField fx:id="IDStammbreite" layoutX="173.0" layoutY="38.0" />
       <TextField fx:id="IDStammhoehe" layoutX="173.0" layoutY="66.0" />
       <TextField fx:id="IDKronenhoehe" layoutX="173.0" layoutY="93.0" />
-      <Button fx:id="Tannezeichnen" layoutX="397.0" layoutY="94.0" mnemonicParsing="false" onAction="#actionTanneZeichnen" text="Tanne zeichnen" />
-      <TextArea fx:id="ausgabe" layoutX="50.0" layoutY="158.0" prefHeight="395.0" prefWidth="263.0" />
+      <Button layoutX="397.0" layoutY="94.0" mnemonicParsing="false" onAction="#actionTanneZeichnen" text="Tanne zeichnen" />
+      <TextArea fx:id="ausgabefield" layoutX="50.0" layoutY="158.0" prefHeight="395.0" prefWidth="263.0" />
    </children>
 </AnchorPane>

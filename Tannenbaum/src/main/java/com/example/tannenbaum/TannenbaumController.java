@@ -9,7 +9,7 @@ public class TannenbaumController {
     Tannenbaum t = new Tannenbaum();
 
     @FXML
-    private int IDStammbreite;
+    private TextField IDStammbreite;
 
     @FXML
     private TextField IDStammhoehe;
@@ -23,18 +23,21 @@ public class TannenbaumController {
     String result;
 
     public void actionTanneZeichnen(){
-        int stammbreite= Integer.parseInt(String.valueOf(IDStammbreite));
-        t.setStammbreite(stammbreite);
+        try {
+            ausgabefield.clear();
+            int stammbreite = Integer.parseInt(IDStammbreite.getText());
+            t.setStammbreite(stammbreite);
 
-        int stammhoehe= Integer.parseInt(String.valueOf(IDStammhoehe));
-        t.setStammhoehe(stammhoehe);
+            int stammhoehe= Integer.parseInt(IDStammhoehe.getText());
+            t.setStammhoehe(stammhoehe);
 
-        int kronenhoehe = Integer.parseInt(String.valueOf(IDKronenhoehe));
-        t.setKronenhoehe(kronenhoehe);
+            int kronenhoehe = Integer.parseInt(IDKronenhoehe.getText());
+            t.setKronenhoehe(kronenhoehe);
 
-        result = t.zeichnen();
-        ausgabefield.setText(result);
-
-
+            result = t.zeichnen();
+            ausgabefield.setText(result);
+        }catch (Exception e){
+            ausgabefield.setText("zahlen eingeben");
+        }
     }
 }

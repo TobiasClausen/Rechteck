@@ -1,4 +1,4 @@
-package com.example.tannenbaumzeichnen;
+package com.example.warenkorb;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class TannenbaumzeichnenApplication extends Application {
+public class WarenkorbApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(TannenbaumzeichnenApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(WarenkorbApplication.class.getResource("Warenkorb_Auswahl.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 620, 340);
+        stage.setTitle("Warenkorb");
         stage.setScene(scene);
         stage.show();
     }

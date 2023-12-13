@@ -11,7 +11,7 @@ public class TannenbaumApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(TannenbaumApplication.class.getResource("Tannenbaum.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Tannenbaum");
         stage.setScene(scene);
         stage.show();
