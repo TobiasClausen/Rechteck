@@ -8,20 +8,18 @@ public class Mondreise {
     double result;
     private double speedKmh;
 
-    // Konstruktor, der den Wert bei der Instanziierung annimmt
     public Mondreise(double speedKmh) {
         this.speedKmh = speedKmh;
     }
 
 
     public double getTravelDurationDays(){
-        result = distanze/speedKmh/24;
-        return result;
+
+        return this.getTravelDurationHours()/24;
     }
 
     public double getTravelDurationHours(){
-        result = distanze/speedKmh;
-        return result;
+        return distanze/speedKmh;
     }
 
 
