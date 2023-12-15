@@ -1,31 +1,57 @@
 package com.example.warenkorb;
 
+import java.math.BigDecimal;
+
 public class Product {
-    public int id;
-    public String Name;
-    public double Price;
+    private String Name;
+    private int id;
+    private int price;
+    private BigDecimal stock;
+    private String unit;
 
-    public String unit;
-
-    public int stock;
-
-
-    public void Name(String product_name) {
-        Name=product_name;
+    public void setName(String productName) {
+        this.Name = productName;
     }
 
-    public void Price(double product_price) {
+    public String getName() {
+        return this.Name;
     }
 
-    public void id(int product_id) {
+    public void setId(int productId) {
+        this.id = productId;
     }
 
-    public void unit(String unit) {
+    public int getId() {
+        return this.id;
     }
 
-    public void stock(int stock) {
+    public void setPrice(int productPrice) {
+        this.price = productPrice;
     }
-    public String getName(){
-        return Name;
+
+    public int getPrice() {
+        return this.price;
+    }
+
+    public void setStock(BigDecimal productStock) {
+        this.stock = productStock;
+    }
+
+    public BigDecimal getStock() {
+        return this.stock;
+    }
+
+    public void setUnit(String productUnit) {
+        this.unit = productUnit;
+    }
+
+    public String getUnit() {
+        return this.unit;
+    }
+
+    @Override
+    public String toString() {
+        return this.Name;
     }
 }
+
