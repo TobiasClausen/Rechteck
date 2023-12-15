@@ -7,9 +7,6 @@ import java.io.File;
 
 public class Auto {
 
-
-
-
     private int AktualleGeschwindigkeit=0;
     private int AktuellerGang=1;
     private boolean istMotorGestartet=false;
@@ -90,6 +87,8 @@ public class Auto {
     }
     public void hube(){
 
+        String soundFilePath = "/Users/tobiasclausen/Documents/ICT_Berufsbildung/Java/OO/Projects/Projects/Auto/Audio/AutoHupen.wav";
+        SoundPlayer.playSound(soundFilePath);
 
     }
     public void schalteMotorAus(){
